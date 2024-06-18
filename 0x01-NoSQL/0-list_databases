@@ -1,0 +1,2 @@
+// A mongo shell script that shows all of the databases available.
+show dbs
