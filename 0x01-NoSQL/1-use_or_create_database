@@ -1,0 +1,2 @@
+// Creating a new database in mongodb named `my_db`.
+use my_db
