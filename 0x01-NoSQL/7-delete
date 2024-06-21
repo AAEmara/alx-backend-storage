@@ -1,0 +1,3 @@
+// Deleting all document collections with `name` attribute with 
+// `Holberton school` value.
+db.school.deleteMany({ name: "Holberton school" })
