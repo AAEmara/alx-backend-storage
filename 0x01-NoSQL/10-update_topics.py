@@ -5,7 +5,7 @@ from typing import List
 
 
 def update_topics(mongo_collection, name: str, topics: List[str]):
-    """Updates the school's documents' topic according to a given name.
+    """Updates the school's documents' topics according to a given name.
 
     Args:
         mongo_collection (PyMongo's Collection): A collection of schools.
@@ -15,6 +15,6 @@ def update_topics(mongo_collection, name: str, topics: List[str]):
     Returns:
         NOTHING
     """
-    mongo_collection.update_one({"name": name},
-                                {"$set": {"topics": topics}},
-                                upsert=True)
+    mongo_collection.update_many({"name": name},
+                                 {"$set": {"topics": topics}},
+                                 upsert=True)
