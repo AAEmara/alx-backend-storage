@@ -16,5 +16,4 @@ def update_topics(mongo_collection, name: str, topics: List[str]):
         NOTHING
     """
     mongo_collection.update_many({"name": name},
-                                 {"$set": {"topics": topics}},
-                                 upsert=True)
+                                 {"$set": {"topics": topics}})
